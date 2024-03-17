@@ -1,3 +1,4 @@
+import styles from "./Profile.module.css"
 const Profile = ({
   name,
   tag,
