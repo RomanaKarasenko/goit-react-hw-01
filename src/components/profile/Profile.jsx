@@ -7,30 +7,30 @@ const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div>
-      <div>
-        <img src={image} alt={name} width={240} />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
-      </div>
-
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
-        </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
-        </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
-        </li>
-      </ul>
+    <div className={styles.profileContainer}>
+    <div className={styles.profileInfo}>
+      <img src={image} alt={name} className={styles.profileImage} />
+      <p className={styles.profileName}>{name}</p>
+      <p className={styles.profileTag}>@{tag}</p>
+      <p className={styles.profileLocation}>{location}</p>
     </div>
-  );
+
+    <ul className={styles.statsList}>
+      <li className={styles.statItem}>
+        <span className={styles.statLabel}>Followers</span>
+        <span className={styles.statValue}> {followers}</span>
+      </li>
+      <li className={styles.statItem}>
+        <span className={styles.statLabel}>Views</span>
+        <span className={styles.statValue}> {views}</span>
+      </li>
+      <li className={styles.statItem}>
+        <span className={styles.statLabel}>Likes</span>
+        <span className={styles.statValue}> {likes}</span>
+      </li>
+    </ul>
+  </div>
+);
 };
 
 export default Profile;
